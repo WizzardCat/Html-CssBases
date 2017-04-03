@@ -1,0 +1,75 @@
+* {
+    background-color: rgb(64,64,64);
+}
+
+.boo {
+    background-position: center center;
+    border-radius: 100%;
+  }
+    
+h1 {
+  color: rgb(239, 123, 7);
+  color: rgba(239, 123, 7, 1);
+  
+  font-family: 'LearningCurveProRegular', 'Times', sans-serif;
+  font-style: italic;
+  font-size: 76px;
+  line-height: 76px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 20%;
+}
+
+a:hover {
+    color: SeaGreen;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: underline;
+    color: purple;
+}
+
+p {
+    
+    font-family: 'LearningCurveProRegular', 'Times', sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 76px;
+    margin: 0;
+    position: relative;
+    text-align: north;
+    top: 20%;
+  }
+
+.blabla {
+    color: limegreen;
+}
+
+.resisingh1Section {
+    color:darkorange;
+    font-family: 'learningCurveProRegular', 'Times', sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 76px;
+       
+}
+.resisingNavText {
+    color:limegreen;
+    width : 20vh;
+    display: inline-block;
+}
+
+
+
+
+.resisingSection {
+    color:limegreen;
+    font-family: 'learningCurveProRegular', 'Times', sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 76px;
+    width: 60%;
+    display: inline-block;   
+}
