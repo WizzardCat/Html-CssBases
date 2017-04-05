@@ -57,19 +57,36 @@ p {
 }
 .resisingNavText {
     color:limegreen;
-    width : 20vh;
-    display: inline-block;
+    float: left;
+    width: 150px;
+    border: 1px solid black; 
+    
+}
+
+.graw {
+    color: darkorange;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 
-
-
 .resisingSection {
+    display: inline-block;
     color:limegreen;
     font-family: 'learningCurveProRegular', 'Times', sans-serif;
     font-style: italic;
     font-size: 25px;
     line-height: 76px;
     width: 60%;
-    display: inline-block;   
+    height: 15%;
+    margin: 12px;
+    padding: 15px;
+    overflow: auto;
+     
+}
+
+.sectioons {
+    margin-left: 170px;
+    border: 1px solid blue;
 }
