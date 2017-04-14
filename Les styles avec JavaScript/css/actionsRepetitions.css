@@ -1,0 +1,35 @@
+#cadre {
+    border: 1px solid red;
+}
+
+
+#bloc {
+    width: 20px;
+    height: 40px;
+    background: red;
+    position: relative; /* Permettra de décaler le bloc */
+    left: 0px; /* Initialise la position gauche du bloc à déplacer */
+    margin-left: -20px; /* Simplifie le calcul des positions initiale et finale du bloc */
+    animation-name: deplacerBloc; /* Nom de l'animation */
+    animation-duration: 6s; /* Durée de l'animation */
+    animation-fill-mode: forwards; /* Laisse le bloc dans sa position finale */
+}
+
+
+@keyframes deplacerBloc {
+    from {
+        /* Position initiale : bord gauche du cadre (en tenant compte de la marge négative) */
+        left: 20px; 
+    }
+    to {
+        /* Position finale : bord droit du cadre (en tenant compte de la marge négative) */
+        left: 100%; 
+    }
+}
+
+/*
+Je vous propose d'adopter la démarche suivante lorsque vous devez animer une page web :
+Si l'animation n'est pas en temps réel et doit simplement se produire à intervalles réguliers, utilisezsetInterval.
+Si l'animation est en temps réel et que vous savez qu'elle peut être effectuée via CSS, adoptez cette technique.
+Pour tous les autres cas, utilisezrequestAnimationFrame.
+*/

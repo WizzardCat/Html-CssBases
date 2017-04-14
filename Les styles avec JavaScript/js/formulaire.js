@@ -124,4 +124,32 @@ console.log(regex.test("")); // Affiche false
 console.log(regex.test("@")); // Affiche true
 console.log(regex.test("sophie&mail.fr")); // Affiche false
 console.log(regex.test("sophie@mail.fr")); // Affiche true
+/*
+L'observation de ce tableau nous conduit aux déductions suivantes :
+
+    Les crochets[] définissent un intervalle de caractères. Toute chaîne contenant au moins un caractère dans cet intervalle correspondra au motif. Les     motifs[a-z] et[A-Z] permettent de rechercher n'importe quelle lettre de l'alphabet, respectivement en minuscules ou en majuscules.
+    Les motifs équivalents[0-9] et\d permettent de rechercher un chiffre.
+    Le caractère point.permet de remplacer n'importe quel caractère.
+    Le caractère\("antislash" ou "backslash") indique que le caractère qui suit doit être recherché en tant que tel. Par exemple,\. permet de rechercher le caractère..
+    Le caractère+permet de rechercher une ou plusieurs occurrences de l'expression qui le précède.
+    Le caractère*permet de rechercher zéro ou plusieurs occurrences de l'expression qui le précède.
+    
+Le site https://regex101.com permet de tester facilement ses expressions régulières. N'hésitez pas à l'utiliser pour mieux comprendre leur fonctionnement.
+
+Concernant les mails, parmi les nombreuses expressions régulières utilisables pour réaliser cette vérification, je vous propose d'utiliser la suivante : /.+@.+\..+/.
+
+*/
+
+// Contrôle du courriel en fin de saisie
+document.getElementById("courriel").addEventListener("blur", function (e) {
+
+// Correspond à une chaîne de la forme xxx@yyy.zzz
+    var regexCourriel = /.+@.+\..+/;
+    var validiteCourriel = "";
+
+    if (!regexCourriel.test(e.target.value)) {
+        validiteCourriel = "Adresse invalide";
+    }
+    document.getElementById("aideCourriel").textContent = validiteCourriel;
+});
 
